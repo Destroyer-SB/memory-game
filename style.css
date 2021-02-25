@@ -1,0 +1,235 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 10em;
+  background-color: lightseagreen;
+  color: white;
+}
+
+h1 {
+  font-family: verdana, arial, sans-serif;
+}
+
+button {
+  padding: 10px;
+  border-radius: 30px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+
+#gameButtonArea > button {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  outline: none;
+}
+
+#difficultyButtonArea = button {
+  padding: 10px;
+  border-radius: 30px;
+  width: 2000px;
+  height: 40px;
+  margin: 2px;
+  outline: none;
+}
+
+#casualBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#casualBtn:hover {
+  background: springgreen;
+}
+
+#intermediateBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#intermediateBtn:hover {
+  background: gold;
+}
+
+#expertBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#expertBtn:hover {
+  background: orangered;
+}
+#goodMorningBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#goodMorningBtn:hover {
+  background: aqua;
+}
+
+
+
+#startBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+
+#stopBtn {
+  background: powderblue;
+  border: 2px solid lightseagreen;
+}
+
+.hidden {
+  display: none;
+}
+
+#button1 {
+  background: white;
+  border: 10px solid springgreen;
+  outline: none;
+}
+#button1:hover {
+  background: springgreen;
+  outline: none;
+}
+
+#button2 {
+  background: white;
+  border: 10px solid aqua;
+  outline: none;
+}
+#button2:hover{
+  background: aqua;
+  outline: none;
+}
+
+#button3 {
+  background: white;
+  border: 10px solid tomato;
+  outline: none;
+}
+#button3:hover {
+  background: tomato;
+  outline: none;
+}
+
+#button4 {
+  background: white;
+  border: 10px solid yellow;
+  outline: none;
+}
+#button4:hover {
+  background: yellow;
+  outline: none;
+  
+}
+#button5 {
+  background: white;
+  border: 10px solid royalblue;
+}
+#button5:hover {
+  background: royalblue;
+  outline: none;
+  
+}
+#button6 {
+  background: white;
+  border: 10px solid deeppink;
+  outline: none;
+}
+#button6:hover {
+  background: deeppink;
+  outline: none;
+}
+
+#button7 {
+  background: white;
+  border: 10px solid firebrick;
+  outline: none;
+}
+#button7:hover {
+  background: firebrick;
+  outline: none;
+}
+#button8 {
+  background: white;
+  border: 10px solid peru;
+  outline: none;
+}
+#button8:hover {
+  background: peru;
+  outline: none;
+}
+
+
+
+
+#button1:active,
+#button1.lit {
+  background: springgreen;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button2:active,
+#button2.lit {
+  background: aqua;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button3:active,
+#button3.lit {
+  background: tomato;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button4:active,
+#button4.lit {
+  background: yellow;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+#button5:active,
+#button5.lit {
+  background: royalblue;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button6:active,
+#button6.lit {
+  background: deeppink;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button7:active,
+#button7.lit {
+  background: firebrick;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
+
+#button8:active,
+#button8.lit {
+  background: peru;
+  border: 10px solid white;
+  width: 130px;
+  height: 130px;
+  outline: none;
+}
