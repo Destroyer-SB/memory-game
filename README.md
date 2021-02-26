@@ -20,4 +20,5 @@ After completing my submission, I ask how certain websites account for audio con
 
 With a few more hours at my disposal to fully complete the project to my liking, I would certainly account for the audio context issue, where I would implement redundant functions for each sound played, so as many users as possible can experience my project on full display. I had another feature in mind, though chose not to implement it, for it was a work-around to the audio context issue, where I would instead use my own recorded audio for pressing each tile, and the user can switch from different instruments (i.e. piano, cello). This, of course, would not have corrected the issue, as audio context suspended all audio from the website, not just the tone generator. Another possibility would have been to externally design a logo for the website title, as well as instructions, difficulty buttons, and start/stop buttons, in replace of the standardized selections of fonts. The idea played in my head of implementing multiple songs as the pattern for the game, which I felt would have been more entertaining for the user.
 
+https://i.imgur.com/Bqij99K.gif
 
