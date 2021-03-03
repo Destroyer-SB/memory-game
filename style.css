@@ -38,47 +38,60 @@ button {
 #casualBtn {
   background: white;
   border: 2px solid lightseagreen;
-}
-#casualBtn:hover {
+} #casualBtn:hover {
   background: springgreen;
 }
 
 #intermediateBtn {
   background: white;
   border: 2px solid lightseagreen;
-}
-#intermediateBtn:hover {
+} #intermediateBtn:hover {
   background: gold;
 }
 
 #expertBtn {
   background: white;
   border: 2px solid lightseagreen;
-}
-#expertBtn:hover {
+} #expertBtn:hover {
   background: orangered;
 }
 #goodMorningBtn {
   background: white;
   border: 2px solid lightseagreen;
-}
-#goodMorningBtn:hover {
+} #goodMorningBtn:hover {
   background: aqua;
 }
 
-
-
-#startBtn {
+#customBtnOff {
+  background: white;
+  border: 2px solid lightseagreen;
+} #customBtnOn {
   background: white;
   border: 2px solid lightseagreen;
 }
 
+#inputSequence {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+
+#customStartBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#startBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
 #stopBtn {
   background: powderblue;
   border: 2px solid lightseagreen;
 }
 
 .hidden {
+  display: none;
+}
+.cloaking {
   display: none;
 }
 

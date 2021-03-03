@@ -1,11 +1,51 @@
-SITE Pre-Work Submission
-Name: Stephen Byrnes
+# Pre-work - *Memory Game*
+
+**Memory Game** is a Light & Sound Memory game to apply for CodePath's SITE Program. 
+
+Submitted by: Stephen Byrnes
+
+Time spent: **7** hours spent in total
+
+## Required Functionality
+
+The following **required** functionality is complete:
+
+* [x] Game interface has a heading (h1 tab), a line of body text (p tag), and four buttons that match the demo app
+* [x] "Start" button toggles between "Start" and "Stop" when clicked. 
+* [x] Game buttons each play a sound when clicked. 
+* [x] Computer plays back sequence of clues including sound and visual cue for each button
+* [x] Play progresses to the next turn (the user gets the next step in the pattern) after a correct guess. 
+* [x] User wins the game after guessing a complete pattern
+
+The following **optional** features are implemented:
+
+* [x] Any HTML page elements (including game buttons) has been styled differently than in the tutorial
+* [x] Buttons use a pitch (frequency) other than the ones in the tutorial
+* [x] More than 4 functional game buttons
+* [ ] Playback speeds up on each turn
+* [ ] Computer picks a different pattern each time the game is played
+* [ ] Player only loses after 3 mistakes (instead of on the first mistake)
+* [ ] Game button appearance change goes beyond color (e.g. add an image)
+* [ ] Game button sound is more complex than a single tone (e.g. an audio file, a chord, a sequence of multiple tones)
+* [ ] User has a limited amount of time to enter their guess on each turn
+
+The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://i.imgur.com/Bqij99K.gif' title='Light & Memory Game Demo
+' width='' alt='Light & Memory Game Demo' />
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
 https://www.w3schools.com/tags/ref_colornames.asp
 https://www.w3schools.com/css/css3_buttons.asp
 https://stackoverflow.com/questions/14098735/how-to-remove-the-default-button-highlighting-in-safari-when-using-jquery
+https://stackoverflow.com/questions/3438027/populating-another-array-from-array-javascript
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
@@ -20,5 +60,18 @@ After completing my submission, I ask how certain websites account for audio con
 
 With a few more hours at my disposal to fully complete the project to my liking, I would certainly account for the audio context issue, where I would implement redundant functions for each sound played, so as many users as possible can experience my project on full display. I had another feature in mind, though chose not to implement it, for it was a work-around to the audio context issue, where I would instead use my own recorded audio for pressing each tile, and the user can switch from different instruments (i.e. piano, cello). This, of course, would not have corrected the issue, as audio context suspended all audio from the website, not just the tone generator. Another possibility would have been to externally design a logo for the website title, as well as instructions, difficulty buttons, and start/stop buttons, in replace of the standardized selections of fonts. The idea played in my head of implementing multiple songs as the pattern for the game, which I felt would have been more entertaining for the user.
 
-https://i.imgur.com/Bqij99K.gif
+## License
 
+    Copyright [Stephen Byrnes]
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

@@ -1,5 +1,5 @@
 //Global Variables
-var pattern = [1, 4, 3, 2, 5, 4, 6, 7, 8];
+var pattern = [];
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
@@ -16,13 +16,43 @@ function startGame() {
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("customStartBtn").classList.add("hidden");
+  playClueSequence();
+}
+
+function showCustom() {
+  document.getElementById("inputSequence").classList.remove("cloaking");
+  document.getElementById("customBtnOff").classList.add("cloaking");
+  document.getElementById("customBtnOn").classList.remove("cloaking");
+  document.getElementById("customStartBtn").classList.remove("cloaking");
+  document.getElementById("customStartBtn").classList.remove("hidden");
+  document.getElementById("startBtn").classList.add("hidden");
+}
+function hideCustom() {
+  document.getElementById("inputSequence").classList.add("cloaking");
+  document.getElementById("customBtnOff").classList.remove("cloaking");
+  document.getElementById("customBtnOn").classList.add("cloaking");
+  document.getElementById("customStartBtn").classList.add("cloaking");
+}
+function startCustom() {
+  progress = 0;
+  gamePlaying = true;
+  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("stopBtn").classList.remove("hidden");
+  document.getElementById("customStartBtn").classList.add("cloaking");
+  document.getElementById("customStartBtn").classList.add("hidden");
+  document.getElementById("inputSequence").classList.add("cloaking");
+
   playClueSequence();
 }
 
 function stopGame() {
   gamePlaying = false;
-  document.getElementById("startBtn").classList.remove("hidden");
   document.getElementById("stopBtn").classList.add("hidden");
+  document.getElementById("startBtn").classList.add("hidden");
+  document.getElementById("customStartBtn").classList.add("cloaking");
+  document.getElementById("customStartBtn").classList.add("hidden");
+  document.getElementById("inputSequence").classList.add("cloaking");
   clueHoldTime = 1000;
   cluePauseTime = 333;
   nextClueWaitTime = 1000;
@@ -33,6 +63,7 @@ function casual() {
   cluePauseTime = 333;
   nextClueWaitTime = 1000;
   pattern = [1, 4, 3, 2, 5, 4, 6, 7, 8];
+  document.getElementById("startBtn").classList.remove("hidden");
 }
 
 function intermediate() {
@@ -40,6 +71,8 @@ function intermediate() {
   cluePauseTime = 222;
   nextClueWaitTime = 500;
   pattern = [2, 2, 4, 1, 8, 7, 1, 8, 7];
+    document.getElementById("startBtn").classList.remove("hidden");
+
 }
 
 function expert() {
@@ -47,6 +80,8 @@ function expert() {
   cluePauseTime = 222;
   nextClueWaitTime = 500;
   pattern = [2, 2, 4, 5, 8, 7, 1, 1, 7, 2, 8, 1, 6, 6, 2, 1];
+    document.getElementById("startBtn").classList.remove("hidden");
+
 }
 
 function goodMorning() {
@@ -54,6 +89,19 @@ function goodMorning() {
   cluePauseTime = 222;
   nextClueWaitTime = 500;
   pattern = [5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 2, 3, 5, 3, 5, 6, 3, 6]
+    document.getElementById("startBtn").classList.remove("hidden");
+
+}
+
+function custom() {
+  clueHoldTime = 250;
+  cluePauseTime = 222;
+  nextClueWaitTime = 500;
+  var numbers = document.getElementById("inputSequence").value;
+  var numbersArray = Array.from(numbers.split(','),Number);
+  for(var a =0;a<numbersArray.length;a++){
+    pattern[a]=numbersArray[a];
+  }
 }
 
 // Sound Synthesis Functions
@@ -139,20 +187,21 @@ function guess(btn) {
   if (!gamePlaying) {
     return;
   }
-  if (btn == pattern[guessCounter]) {
+  if (pattern[guessCounter] == btn) {
 
   if (guessCounter == progress) {
       if (progress == pattern.length - 1) {
         winGame();
       } else {
-        progress = progress + 1;
+        progress++;
         playClueSequence();
       }
     } else {
-      guessCounter = guessCounter + 1;
+      guessCounter++;
     }
   } else {
     loseGame();
   }
 }
+
 
