@@ -17,12 +17,17 @@
 
     <p>
       Welcome! Try and match the sequence of lights & sounds by selecting the
-      correct order of boxes
+      correct order of tiles
     </p>
 
     <p>
       Select your difficulty and then "start" to begin!
     </p>
+    
+    <p>
+      For a custom sequence: input the sequence of tiles (ex. 1,2,3,4) and then "start" to begin!
+    </p>
+    
 
     <div id="difficultyButtonArea">
       <button id="casualBtn" onclick="casual(), o.start(0)">
@@ -39,61 +44,82 @@
       </button>
     </div>
     
-     <button id="startBtn" onclick="startGame(), o.start(0)">
+    <div>
+      <button id="customBtnOff" onclick="showCustom(), customSequence()">
+      Custom  
+      </button>
+      <button id="customBtnOn" onclick="hideCustom()" class="cloaking">
+      Custom  
+      </button>
+      <input id="inputSequence" type="text" class="cloaking" size="20">
+    </div>
+    
+     <button id="startBtn" class="hidden" onclick="startGame(), o.start(0)">
       Start
     </button>
-    <button id="stopBtn" class="hidden" onclick="stopGame()">
+    <button id="customStartBtn" class="cloaking" onclick="custom(), startGame(), o.start(0)">
+      Start
+    </button>
+    <button id="stopBtn" class="hidden" onclick="stopGame(), hideCustom()">
       Stop
     </button>
 
     <div id="gameButtonArea">
       <button
         id="button1"
-        onclick="guess(1),o.start(0)"
-        onmousedown="startTone(1),o.start(0)"
+        onclick="guess(1), o.start(0)"
+        onmousedown="startTone(1), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(1)"
       ></button>
       <button
         id="button2"
         onclick="guess(2), o.start(0)"
         onmousedown="startTone(2), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(2)"
       ></button>
       <button
         id="button3"
         onclick="guess(3), o.start(0)"
         onmousedown="startTone(3), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(3)"
       ></button>
       <button
         id="button4"
         onclick="guess(4), o.start(0)"
         onmousedown="startTone(4), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(4)"
       ></button>
       <button
         id="button5"
         onclick="guess(5), o.start(0)"
         onmousedown="startTone(5), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(5)"
       ></button>
       <button
         id="button6"
         onclick="guess(6), o.start(0)"
         onmousedown="startTone(6), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(6)"
       ></button>
       <button
         id="button7"
         onclick="guess(7), o.start(0)"
         onmousedown="startTone(7), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(7)"
       ></button>
       <button
         id="button8"
         onclick="guess(8), o.start(0)"
         onmousedown="startTone(8), o.start(0)"
         onmouseup="stopTone()"
+        onmouseleave="stopTone(8)"
       ></button>
     </div>
   </body>
