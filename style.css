@@ -1,16 +1,174 @@
 /* CSS files add styling rules to your content */
 
+/* General Styling */
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 10em;
   background-color: lightseagreen;
   color: white;
 }
-
 h1 {
   font-family: verdana, arial, sans-serif;
 }
 
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+/* Background-Transition Styling */
+#background {
+  transition: background-color 2s
+}
+
+/* Slider Styling */
+.slidecontainer {
+  width: 30%;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 10%;
+  height: 15px;
+  border-radius: 5px;
+  background: DarkGray;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+/* Difficulty Button Styling */
+#difficultyButtonArea = button {
+  padding: 10px;
+  border-radius: 30px;
+  width: 2000px;
+  height: 40px;
+  margin: 2px;
+  outline: none;
+}
+#casualBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+} #casualBtn:hover {
+  background: springgreen;
+  transition: background-color 1000ms linear;
+}
+#intermediateBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+} #intermediateBtn:hover {
+  background: gold;
+}
+#expertBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+} #expertBtn:hover {
+  background: orangered;
+}
+#goodMorningBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+} #goodMorningBtn:hover {
+  background: aqua;
+}
+
+/* Custom Section Styling */
+#customBtnOff {
+  background: white;
+  border: 2px solid lightseagreen;
+} #customBtnOn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#inputSequence {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#customStartBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+
+/* Start & Stop Button Styling */
+#startBtn {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#stopBtn {
+  background: powderblue;
+  border: 2px solid lightseagreen;
+}
+
+/* Key Button Styling */
+#keyC {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyDFlat {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyD {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyEFlat {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyE {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyF {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyGFlat {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyG {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyAFlat {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyA {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyBFlat {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+#keyB {
+  background: white;
+  border: 2px solid lightseagreen;
+}
+
+/* Game Tile Styling */
 button {
   padding: 10px;
   border-radius: 30px;
@@ -25,76 +183,6 @@ button {
   margin: 10px;
   outline: none;
 }
-
-#difficultyButtonArea = button {
-  padding: 10px;
-  border-radius: 30px;
-  width: 2000px;
-  height: 40px;
-  margin: 2px;
-  outline: none;
-}
-
-#casualBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-} #casualBtn:hover {
-  background: springgreen;
-}
-
-#intermediateBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-} #intermediateBtn:hover {
-  background: gold;
-}
-
-#expertBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-} #expertBtn:hover {
-  background: orangered;
-}
-#goodMorningBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-} #goodMorningBtn:hover {
-  background: aqua;
-}
-
-#customBtnOff {
-  background: white;
-  border: 2px solid lightseagreen;
-} #customBtnOn {
-  background: white;
-  border: 2px solid lightseagreen;
-}
-
-#inputSequence {
-  background: white;
-  border: 2px solid lightseagreen;
-}
-
-#customStartBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-}
-#startBtn {
-  background: white;
-  border: 2px solid lightseagreen;
-}
-#stopBtn {
-  background: powderblue;
-  border: 2px solid lightseagreen;
-}
-
-.hidden {
-  display: none;
-}
-.cloaking {
-  display: none;
-}
-
 #button1 {
   background: white;
   border: 10px solid springgreen;
@@ -104,7 +192,6 @@ button {
   background: springgreen;
   outline: none;
 }
-
 #button2 {
   background: white;
   border: 10px solid aqua;
@@ -114,7 +201,6 @@ button {
   background: aqua;
   outline: none;
 }
-
 #button3 {
   background: white;
   border: 10px solid tomato;
@@ -124,7 +210,6 @@ button {
   background: tomato;
   outline: none;
 }
-
 #button4 {
   background: white;
   border: 10px solid yellow;
@@ -132,8 +217,7 @@ button {
 }
 #button4:hover {
   background: yellow;
-  outline: none;
-  
+  outline: none;  
 }
 #button5 {
   background: white;
@@ -141,8 +225,7 @@ button {
 }
 #button5:hover {
   background: royalblue;
-  outline: none;
-  
+  outline: none;  
 }
 #button6 {
   background: white;
@@ -153,7 +236,6 @@ button {
   background: deeppink;
   outline: none;
 }
-
 #button7 {
   background: white;
   border: 10px solid firebrick;
@@ -174,8 +256,7 @@ button {
 }
 
 
-
-
+/* Active-Game-Tile Stying */
 #button1:active,
 #button1.lit {
   background: springgreen;
@@ -184,7 +265,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button2:active,
 #button2.lit {
   background: aqua;
@@ -193,7 +273,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button3:active,
 #button3.lit {
   background: tomato;
@@ -202,7 +281,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button4:active,
 #button4.lit {
   background: yellow;
@@ -219,7 +297,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button6:active,
 #button6.lit {
   background: deeppink;
@@ -228,7 +305,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button7:active,
 #button7.lit {
   background: firebrick;
@@ -237,7 +313,6 @@ button {
   height: 130px;
   outline: none;
 }
-
 #button8:active,
 #button8.lit {
   background: peru;

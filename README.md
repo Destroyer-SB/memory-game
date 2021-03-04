@@ -4,7 +4,7 @@
 
 Submitted by: Stephen Byrnes
 
-Time spent: **7** hours spent in total
+Time spent: **16** hours spent in total
 
 ## Required Functionality
 
@@ -31,7 +31,14 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app!
+- [x] Changed the pitch of the tiles
+- [x] Added different difficulty options
+- [x] Added support for changing the key of the tile pitches via a slider
+- [x] Added a "custom" difficulty option where the user inputs any array as a sequence of tiles
+- [x] Added a custom sequence that resembles a song, labeled "Good Morning Song"
+- [x] Background color changes based off the selected difficulty
+- [x] Tiles change color when user hovers over the tile
+- [x] Tiles change size when clicked
 
 ## Video Walkthrough
 
@@ -42,10 +49,19 @@ Here's a walkthrough of implemented user stories:
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
-https://www.w3schools.com/tags/ref_colornames.asp
-https://www.w3schools.com/css/css3_buttons.asp
-https://stackoverflow.com/questions/14098735/how-to-remove-the-default-button-highlighting-in-safari-when-using-jquery
-https://stackoverflow.com/questions/3438027/populating-another-array-from-array-javascript
+HTML Color Names: https://www.w3schools.com/tags/ref_colornames.asp
+
+Button Styles: https://www.w3schools.com/css/css3_buttons.asp
+
+Removing Button Highlight: https://stackoverflow.com/questions/14098735/how-to-remove-the-default-button-highlighting-in-safari-when-using-jquery
+
+Filling Array From Array: https://stackoverflow.com/questions/3438027/populating-another-array-from-array-javascript
+
+Note Frequencies: https://pages.mtu.edu/~suits/notefreqs.html
+
+Slider Styles: https://www.w3schools.com/howto/howto_js_rangeslider.asp
+
+Transitioning Background Color: https://css-tricks.com/almanac/properties/t/transition/
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
 
