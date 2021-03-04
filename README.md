@@ -44,8 +44,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/Bqij99K.gif' title='Light & Memory Game Demo
-' width='' alt='Light & Memory Game Demo' />
+<img src='https://i.imgur.com/0IEgWrx.gif' title='Light And Memory Game Demo
+' width='' alt='Light And Memory Game Demo' />
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 

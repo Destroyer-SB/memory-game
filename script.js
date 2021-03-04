@@ -12,6 +12,7 @@ var nextClueWaitTime = 1000; //how long to wait before starting playback of the 
 //Functions in charge of running and stopping the game
 function startGame() {
   progress = 0;
+  guessCounter = 0;
   gamePlaying = true;
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
@@ -63,6 +64,8 @@ function casual() {
   if (gamePlaying == true) {
     stopGame();
   } else {
+    pattern = new Array();
+    progress = 0;
   clueHoldTime = 750;
   cluePauseTime = 333;
   nextClueWaitTime = 1000;
@@ -75,6 +78,8 @@ function intermediate() {
   if (gamePlaying == true) {
     stopGame();
   } else {
+    pattern = new Array();
+    progress = 0;
   clueHoldTime = 500;
   cluePauseTime = 222;
   nextClueWaitTime = 500;
@@ -87,6 +92,8 @@ function expert() {
   if (gamePlaying == true) {
     stopGame();
   } else {
+    pattern = new Array();
+    progress = 0;
   clueHoldTime = 250;
   cluePauseTime = 222;
   nextClueWaitTime = 500;
@@ -99,6 +106,7 @@ function goodMorning() {
   if (gamePlaying == true) {
     stopGame();
   } else {
+    progress = 0;
   clueHoldTime = 300;
   cluePauseTime = 222;
   nextClueWaitTime = 500;
@@ -111,6 +119,8 @@ function custom() {
   if (gamePlaying == true) {
     stopGame();
   } else {
+    pattern = new Array();
+    progress = 0;
   clueHoldTime = 250;
   cluePauseTime = 222;
   nextClueWaitTime = 500;
