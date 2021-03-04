@@ -6,15 +6,16 @@
 
     <title>Light & Memory Game</title>
 
-    <!-- import the webpage's stylesheet -->
+
     <link rel="stylesheet" href="/style.css" />
 
-    <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
   </head>
-  <body>
+  
+  <body id="background">
     <h1>Light & Sound Memory Game</h1>
-
+    
+<!-- Welcome Text-->
     <p>
       Welcome! Try and match the sequence of lights & sounds by selecting the
       correct order of tiles
@@ -25,52 +26,104 @@
     </p>
     
     <p>
-      For a custom sequence: input the sequence of tiles (ex. 1,2,3,4) and then "start" to begin!
+      For custom: input the sequence of tiles (ex. 1,2,3,4) and then "start" to begin! (Note: Tiles are labeled from 1 to 8, from left to right)
     </p>
     
-
+<!-- Difficulty Button Region-->
     <div id="difficultyButtonArea">
-      <button id="casualBtn" onclick="casual(), o.start(0)">
+      <button id="casualBtn" onclick="casual(),backgroundColorCasual(), o.start(0)">
         Casual
       </button>
-      <button id="intermediateBtn" onclick="intermediate(), o.start(0)">
+      <button id="intermediateBtn" onclick="intermediate(), backgroundColorIntermediate(), o.start(0)">
         Intermediate
       </button>
-      <button id="expertBtn" onclick="expert(), o.start(0)">
+      <button id="expertBtn" onclick="expert(), backgroundColorExpert(), o.start(0)">
         Expert
       </button>
-      <button id="goodMorningBtn" onclick="goodMorning(), o.start(0)">
+      <button id="goodMorningBtn" onclick="goodMorning(), backgroundColorGoodMorning(), o.start(0)">
         Good Morning Song
       </button>
+      
+ <!-- Key Change Region-->     
+      <div id="keySection">
+        <div id="keyBtn">
+        <button id="keyC" class="hidden" style="position: absolute; right: 250;">
+        Key: C
+      </button>
+      <button id="keyD" class="hidden" style="position: absolute; right: 250;">
+        Key: D
+      </button>
+        <button id="keyE" class="hidden" style="position: absolute; right: 250;">
+        Key: E
+      </button>
+        <button id="keyF" style="position: absolute; right: 250;">
+        Key: F
+      </button>
+        <button id="keyG" class="hidden" style="position: absolute; right: 250;">
+        Key: G
+      </button>
+        <button id="keyA" class="hidden" style="position: absolute; right: 250;">
+        Key: A
+      </button>
+        <button id="keyB" class="hidden" style="position: absolute; right: 250;">
+        Key: B
+      </button>
+        <button id="keyDFlat" class="hidden" style="position: absolute; right: 250;">
+        Key: C# / Db
+      </button>
+        <button id="keyEFlat" class="hidden" style="position: absolute; right: 250;">
+        Key: D# / Eb
+      </button>
+        <button id="keyGFlat" class="hidden" style="position: absolute; right: 250;">
+        Key: F# / Gb
+      </button>
+        <button id="keyAFlat" class="hidden" style="position: absolute; right: 250;">
+        Key: G# / Ab
+      </button>
+        <button id="keyBFlat" class="hidden" style="position: absolute; right: 250;">
+        Key: A# / Bb
+      </button> 
+        </div>
+<!-- Slider Region-->                 
+        <div class="slidecontainer">
+          <input class="slider" type="range" min="1" max="12" value="6" style="position: absolute; right: 355;" onchange="sliderValue(this.value)">
+        
+        <p id="value" class="hidden"></p>
+        <p id="key"></p>
+        </div>   
+      </div>      
     </div>
-    
+
+<!-- Custom Button Region-->     
     <div>
-      <button id="customBtnOff" onclick="showCustom(), customSequence()">
+      <button id="customBtnOff" onclick="showCustom(), backgroundColorCustom(), customSequence()">
       Custom  
       </button>
-      <button id="customBtnOn" onclick="hideCustom()" class="cloaking">
+      <button id="customBtnOn" onclick="hideCustom(), backgroundColorCustom()" class="hidden">
       Custom  
       </button>
-      <input id="inputSequence" type="text" class="cloaking" size="20">
+      <input id="inputSequence" type="text" class="hidden" size="20">
     </div>
     
+ <!-- Start & Stop Button Region-->    
      <button id="startBtn" class="hidden" onclick="startGame(), o.start(0)">
       Start
     </button>
-    <button id="customStartBtn" class="cloaking" onclick="custom(), startGame(), o.start(0)">
+    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), o.start(0)">
       Start
     </button>
     <button id="stopBtn" class="hidden" onclick="stopGame(), hideCustom()">
       Stop
     </button>
-
+    
+ <!-- Game Tiles Region-->  
     <div id="gameButtonArea">
       <button
         id="button1"
         onclick="guess(1), o.start(0)"
         onmousedown="startTone(1), o.start(0)"
-        onmouseup="stopTone()"
-        onmouseleave="stopTone(1)"
+              onmouseup="stopTone(), stopSound1()"
+              onmouseleave="stopTone(1)"
       ></button>
       <button
         id="button2"
@@ -122,5 +175,34 @@
         onmouseleave="stopTone(8)"
       ></button>
     </div>
+    
+<!-- Script for Changing Background Color Region-->  
+    <script>
+    function changeColor(color) { 
+                document.body.style.background = color; 
+            } 
+              
+      function backgroundColorCasual() { 
+                changeColor('MediumSeaGreen');
+                document.getElementById("myDIV").style.transition= "all 1s";
+            }
+      function backgroundColorIntermediate() { 
+                changeColor('SandyBrown');
+                document.getElementById("myDIV").style.transition= "all 1s";
+            }
+      function backgroundColorExpert() { 
+                changeColor("DarkRed");
+                document.getElementById("myDIV").style.transition= "all 1s";
+            }
+      function backgroundColorGoodMorning() { 
+                changeColor("SteelBlue");
+                document.getElementById("myDIV").style.transition= "all 1s";
+            }
+      function backgroundColorCustom() { 
+                changeColor("HotPink");
+                document.getElementById("myDIV").style.transition= "all 1s";
+            }
+    </script>
+    
   </body>
 </html>
