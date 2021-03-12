@@ -31,16 +31,16 @@
     
 <!-- Difficulty Button Region-->
     <div id="difficultyButtonArea">
-      <button id="casualBtn" onclick="casual(),backgroundColorCasual(), o.start(0)">
+      <button id="casualBtn" onclick="casual(), backgroundColorCasual(), playClickCasual(), o.start(0)">
         Casual
       </button>
-      <button id="intermediateBtn" onclick="intermediate(), backgroundColorIntermediate(), o.start(0)">
+      <button id="intermediateBtn" onclick="intermediate(), backgroundColorIntermediate(), playClickIntermediate(), o.start(0)">
         Intermediate
       </button>
-      <button id="expertBtn" onclick="expert(), backgroundColorExpert(), o.start(0)">
+      <button id="expertBtn" onclick="expert(), backgroundColorExpert(), playClickExpert(), o.start(0)">
         Expert
       </button>
-      <button id="goodMorningBtn" onclick="goodMorning(), backgroundColorGoodMorning(), o.start(0)">
+      <button id="goodMorningBtn" onclick="goodMorning(), backgroundColorGoodMorning(), playClickGM(), o.start(0)">
         Good Morning Song
       </button>
       
@@ -96,23 +96,23 @@
 
 <!-- Custom Button Region-->     
     <div>
-      <button id="customBtnOff" onclick="showCustom(), backgroundColorCustom(), customSequence()">
+      <button id="customBtnOff" onclick="showCustom(), backgroundColorCustom(), playClickCustom(), customSequence()">
       Custom  
       </button>
-      <button id="customBtnOn" onclick="hideCustom(), backgroundColorCustom()" class="hidden">
+      <button id="customBtnOn" onclick="hideCustom(), backgroundColorCustom(), playClickCustom(), " class="hidden">
       Custom  
       </button>
       <input id="inputSequence" type="text" class="hidden" size="20">
     </div>
     
  <!-- Start & Stop Button Region-->    
-     <button id="startBtn" class="hidden" onclick="startGame(), o.start(0)">
+     <button id="startBtn" class="hidden" onclick="startGame(), playClickStart(), o.start(0)">
       Start
     </button>
-    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), o.start(0)">
+    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), playClickStart(), o.start(0)">
       Start
     </button>
-    <button id="stopBtn" class="hidden" onclick="stopGame(), hideCustom()">
+    <button id="stopBtn" class="hidden" onclick="stopGame(), playClickStop(), hideCustom()">
       Stop
     </button>
     
@@ -122,9 +122,9 @@
         id="button1"
         onclick="guess(1), o.start(0)"
         onmousedown="startTone(1), o.start(0)"
-              onmouseup="stopTone(), stopSound1()"
-              onmouseleave="stopTone(1)"
-      ></button>
+              onmouseup="stopTone()"
+              onmouseleave="stopTone(1)">
+      </button>
       <button
         id="button2"
         onclick="guess(2), o.start(0)"
@@ -176,6 +176,7 @@
       ></button>
     </div>
     
+    
 <!-- Script for Changing Background Color Region-->  
     <script>
     function changeColor(color) { 
@@ -184,25 +185,133 @@
               
       function backgroundColorCasual() { 
                 changeColor('MediumSeaGreen');
-                document.getElementById("myDIV").style.transition= "all 1s";
+                document.getElementById("background").style.transition= "all 2s";
             }
       function backgroundColorIntermediate() { 
                 changeColor('SandyBrown');
-                document.getElementById("myDIV").style.transition= "all 1s";
+                document.getElementById("background").style.transition= "all 2s";
             }
       function backgroundColorExpert() { 
                 changeColor("DarkRed");
-                document.getElementById("myDIV").style.transition= "all 1s";
+                document.getElementById("background").style.transition= "all 2s";
             }
       function backgroundColorGoodMorning() { 
                 changeColor("SteelBlue");
-                document.getElementById("myDIV").style.transition= "all 1s";
+                document.getElementById("background").style.transition= "all 2s";
             }
       function backgroundColorCustom() { 
                 changeColor("HotPink");
-                document.getElementById("myDIV").style.transition= "all 1s";
+                document.getElementById("background").style.transition= "all 2s";
             }
     </script>
+    
+    <audio id="clickSoundCasual" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick.mp3?v=1615565831125" type="audio/mpeg">
+</audio>
+    <audio id="clickSoundIntermediate" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%202.mp3?v=1615569833711" type="audio/mpeg">
+</audio>
+    <audio id="clickSoundExpert" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%203.mp3?v=1615569833379" type="audio/mpeg">
+</audio>
+    <audio id="clickSoundGM" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%204.mp3?v=1615569833682" type="audio/mpeg">
+</audio>
+    <audio id="clickSoundCustom" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%205.mp3?v=1615569833406" type="audio/mpeg">
+</audio>
+    
+    <audio id="startSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FStart.mp3?v=1615570754098" type="audio/mpeg">
+</audio>
+    <audio id="stopSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FStop.mp3?v=1615570756113" type="audio/mpeg">
+</audio>
+    
+    <audio id="clickC" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20C.mp3?v=1615569833822" type="audio/mpeg">
+</audio>
+    <audio id="clickDb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20C%23.mp3?v=1615569834174" type="audio/mpeg">
+</audio>
+    <audio id="clickD" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20D.mp3?v=1615569834113" type="audio/mpeg">
+</audio>
+    <audio id="clickEb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20Eb.mp3?v=1615569834308" type="audio/mpeg">
+</audio>
+    <audio id="clickE" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20E.mp3?v=1615569833698" type="audio/mpeg">
+</audio>
+    <audio id="clickF" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20F.mp3?v=1615569834375" type="audio/mpeg">
+</audio>
+    <audio id="clickGb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20Gb.mp3?v=1615569834126" type="audio/mpeg">
+</audio>
+    <audio id="clickG" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20G.mp3?v=1615569834049" type="audio/mpeg">
+</audio>
+    <audio id="clickAb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20Ab.mp3?v=1615569834094" type="audio/mpeg">
+</audio>
+    <audio id="clickA" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20A.mp3?v=1615569834234" type="audio/mpeg">
+</audio>
+    <audio id="clickBb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20Bb.mp3?v=1615569834020" type="audio/mpeg">
+</audio>
+    <audio id="clickB" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20B.mp3?v=1615569833503" type="audio/mpeg">
+</audio>
+    
+    <audio id="gameWonSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FGameWon.mp3?v=1615590399395" type="audio/mpeg">
+</audio>
+    <audio id="gameLoseSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FGameLose.mp3?v=1615590399394" type="audio/mpeg">
+</audio>
+    
+    <script>
+      var clickCasual = document.getElementById("clickSoundCasual"); 
+      var clickIntermediate = document.getElementById("clickSoundIntermediate"); 
+      var clickExpert = document.getElementById("clickSoundExpert"); 
+      var clickGM = document.getElementById("clickSoundGM"); 
+      var clickCustom = document.getElementById("clickSoundCustom"); 
+      var clickStart = document.getElementById("startSound"); 
+      var clickStop = document.getElementById("stopSound"); 
+      
+      
+function playClickCasual() { 
+  if (clickCasual.paused) {
+        clickCasual.play();
+    } else {
+        clickCasual.currentTime = 0
+  }
+}
+      function playClickIntermediate() { 
+  if (clickIntermediate.paused) {
+        clickIntermediate.play();
+    } else {
+        clickIntermediate.currentTime = 0
+  }
+}
+      function playClickExpert() { 
+  if (clickExpert.paused) {
+        clickExpert.play();
+    } else {
+        clickExpert.currentTime = 0
+  }
+}
+      function playClickGM() { 
+  if (clickGM.paused) {
+        clickGM.play();
+    } else {
+        clickGM.currentTime = 0
+  }
+}
+      function playClickCustom() { 
+  if (clickCustom.paused) {
+        clickCustom.play();
+    } else {
+        clickCustom.currentTime = 0
+  }
+}
+           function playClickStart() { 
+  if (clickStart.paused) {
+        clickStart.play();
+    } else {
+        clickStart.currentTime = 0
+  }
+}
+           function playClickStop() { 
+  if (clickStop.paused) {
+        clickStop.play();
+    } else {
+        clickStop.currentTime = 0
+  }
+}
+    </script>
+    
     
   </body>
 </html>

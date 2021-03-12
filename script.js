@@ -198,11 +198,14 @@ function playClueSequence() {
 
 function loseGame() {
   stopGame();
+  soundGameLose();
   pattern = new Array();
   alert("Game Over. You lost.");
+
 }
 function winGame() {
   stopGame();
+  soundGameWon();
   pattern = new Array();
   alert("Game Over. You won!");
 }
@@ -378,6 +381,105 @@ function keyBFlat() {
 }
 
 //Slider Functions
+
+var clickC = document.getElementById("clickC");
+var clickDb = document.getElementById("clickDb"); 
+var clickD = document.getElementById("clickD"); 
+var clickEb = document.getElementById("clickEb"); 
+var clickE = document.getElementById("clickE"); 
+var clickF = document.getElementById("clickF");
+var clickGb = document.getElementById("clickGb"); 
+var clickG = document.getElementById("clickG"); 
+var clickAb = document.getElementById("clickAb");
+var clickA = document.getElementById("clickA"); 
+var clickBb = document.getElementById("clickBb"); 
+var clickB = document.getElementById("clickB"); 
+
+function clickSoundC() {
+  if (clickC.paused) {
+        clickC.play();
+    } else {
+        clickC.currentTime = 0
+  }
+}
+function clickSoundDb() {
+  if (clickDb.paused) {
+        clickDb.play();
+    } else {
+        clickDb.currentTime = 0
+  }
+}
+function clickSoundD() {
+  if (clickD.paused) {
+        clickD.play();
+    } else {
+        clickD.currentTime = 0
+  }
+}
+function clickSoundEb() {
+  if (clickEb.paused) {
+        clickEb.play();
+    } else {
+        clickEb.currentTime = 0
+  }
+}
+function clickSoundE() {
+  if (clickE.paused) {
+        clickE.play();
+    } else {
+        clickE.currentTime = 0
+  }
+}
+function clickSoundF() {
+  if (clickF.paused) {
+        clickF.play();
+    } else {
+        clickF.currentTime = 0
+  }
+}
+function clickSoundGb() {
+  if (clickGb.paused) {
+        clickGb.play();
+    } else {
+        clickGb.currentTime = 0
+  }
+}
+function clickSoundG() {
+  if (clickG.paused) {
+        clickG.play();
+    } else {
+        clickG.currentTime = 0
+  }
+}
+function clickSoundAb() {
+  if (clickAb.paused) {
+        clickAb.play();
+    } else {
+        clickAb.currentTime = 0
+  }
+}
+function clickSoundA() {
+  if (clickA.paused) {
+        clickA.play();
+    } else {
+        clickA.currentTime = 0
+  }
+}
+function clickSoundBb() {
+  if (clickBb.paused) {
+        clickBb.play();
+    } else {
+        clickBb.currentTime = 0
+  }
+}
+function clickSoundB() {
+  if (clickB.paused) {
+        clickB.play();
+    } else {
+        clickB.currentTime = 0
+  }
+}
+
 function sliderValue(slideAmount) {
   var sliderValue = document.getElementById("value");
 sliderValue.innerHTML = slideAmount;
@@ -396,7 +498,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
-    
+  clickSoundC();
 } else if (slideAmount == 2) {
   keyDFlat();
   document.getElementById("keyC").classList.add("hidden");
@@ -411,6 +513,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundDb();
 } else if (slideAmount == 3) {
   keyD();
   document.getElementById("keyC").classList.add("hidden");
@@ -425,6 +528,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundD();
 } else if (slideAmount == 4) {
   keyEFlat();
   document.getElementById("keyC").classList.add("hidden");
@@ -439,6 +543,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundEb();
 }
   else if (slideAmount == 5) {
   keyE();
@@ -454,6 +559,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundE();
 } else if (slideAmount == 6) {
   keyF();
   document.getElementById("keyC").classList.add("hidden");
@@ -468,6 +574,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundF();
 }else if (slideAmount == 7) {
   keyGFlat();
   document.getElementById("keyC").classList.add("hidden");
@@ -482,6 +589,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundGb();
 }else if (slideAmount == 8) {
   keyG();
   document.getElementById("keyC").classList.add("hidden");
@@ -496,6 +604,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundG();
 } else if (slideAmount == 9) {
   keyAFlat();
   document.getElementById("keyC").classList.add("hidden");
@@ -510,6 +619,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundAb();
 } else if (slideAmount == 10) {
   keyA();
   document.getElementById("keyC").classList.add("hidden");
@@ -524,6 +634,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.remove("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundA();
 } else if (slideAmount == 11) {
   keyBFlat();
   document.getElementById("keyC").classList.add("hidden");
@@ -538,6 +649,7 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.remove("hidden");
   document.getElementById("keyB").classList.add("hidden");
+  clickSoundBb();
 } else if (slideAmount == 12) {
   keyB();
   document.getElementById("keyC").classList.add("hidden");
@@ -552,5 +664,25 @@ sliderValue.innerHTML = slideAmount;
   document.getElementById("keyA").classList.add("hidden");
   document.getElementById("keyBFlat").classList.add("hidden");
   document.getElementById("keyB").classList.remove("hidden");
+  clickSoundB();
+  }
+}
+
+//Game Outcome Sounds
+var soundWin = document.getElementById("gameWonSound");
+var soundLose = document.getElementById("gameLoseSound");
+
+function soundGameWon() {
+  if (soundWin.paused) {
+        soundWin.play();
+    } else {
+        soundWin.currentTime = 0
+  }
+}
+function soundGameLose() {
+  if (soundLose.paused) {
+        soundLose.play();
+    } else {
+        soundLose.currentTime = 0
   }
 }
