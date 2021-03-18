@@ -3,6 +3,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="#">
+    
 
     <title>Light & Memory Game</title>
 
@@ -31,16 +33,16 @@
     
 <!-- Difficulty Button Region-->
     <div id="difficultyButtonArea">
-      <button id="casualBtn" onclick="casual(), backgroundColorCasual(), playClickCasual(), o.start(0)">
+      <button id="casualBtn" onclick="casual(), backgroundColorCasual(), playClickCasual(), context.resume()">
         Casual
       </button>
-      <button id="intermediateBtn" onclick="intermediate(), backgroundColorIntermediate(), playClickIntermediate(), o.start(0)">
+      <button id="intermediateBtn" onclick="intermediate(), backgroundColorIntermediate(), playClickIntermediate(), context.resume()">
         Intermediate
       </button>
-      <button id="expertBtn" onclick="expert(), backgroundColorExpert(), playClickExpert(), o.start(0)">
+      <button id="expertBtn" onclick="expert(), backgroundColorExpert(), playClickExpert(), context.resume()">
         Expert
       </button>
-      <button id="goodMorningBtn" onclick="goodMorning(), backgroundColorGoodMorning(), playClickGM(), o.start(0)">
+      <button id="goodMorningBtn" onclick="goodMorning(), backgroundColorGoodMorning(), playClickGM(), context.resume()">
         Good Morning Song
       </button>
       
@@ -86,7 +88,7 @@
         </div>
 <!-- Slider Region-->                 
         <div class="slidecontainer">
-          <input class="slider" type="range" min="1" max="12" value="6" style="position: absolute; right: 355;" onchange="sliderValue(this.value)">
+          <input class="slider" type="range" min="1" max="12" value="6" style="position: absolute; right: 355;" oninput="sliderValue(this.value)">
         
         <p id="value" class="hidden"></p>
         <p id="key"></p>
@@ -96,7 +98,7 @@
 
 <!-- Custom Button Region-->     
     <div>
-      <button id="customBtnOff" onclick="showCustom(), backgroundColorCustom(), playClickCustom(), customSequence()">
+      <button id="customBtnOff" onclick="showCustom(), backgroundColorCustom(), playClickCustom()">
       Custom  
       </button>
       <button id="customBtnOn" onclick="hideCustom(), backgroundColorCustom(), playClickCustom(), " class="hidden">
@@ -106,10 +108,10 @@
     </div>
     
  <!-- Start & Stop Button Region-->    
-     <button id="startBtn" class="hidden" onclick="startGame(), playClickStart(), o.start(0)">
+     <button id="startBtn" class="hidden" onclick="startGame(), playClickStart(), context.resume()">
       Start
     </button>
-    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), playClickStart(), o.start(0)">
+    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), playClickStart(), context.resume()">
       Start
     </button>
     <button id="stopBtn" class="hidden" onclick="stopGame(), playClickStop(), hideCustom()">
@@ -120,57 +122,57 @@
     <div id="gameButtonArea">
       <button
         id="button1"
-        onclick="guess(1), o.start(0)"
-        onmousedown="startTone(1), o.start(0)"
+        onclick="guess(1), context.resume()"
+        onmousedown="startTone(1), context.resume()"
               onmouseup="stopTone()"
               onmouseleave="stopTone(1)">
       </button>
       <button
         id="button2"
-        onclick="guess(2), o.start(0)"
-        onmousedown="startTone(2), o.start(0)"
+        onclick="guess(2), context.resume()"
+        onmousedown="startTone(2), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(2)"
       ></button>
       <button
         id="button3"
-        onclick="guess(3), o.start(0)"
-        onmousedown="startTone(3), o.start(0)"
+        onclick="guess(3), context.resume()"
+        onmousedown="startTone(3), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(3)"
       ></button>
       <button
         id="button4"
-        onclick="guess(4), o.start(0)"
-        onmousedown="startTone(4), o.start(0)"
+        onclick="guess(4), context.resume()"
+        onmousedown="startTone(4), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(4)"
       ></button>
       <button
         id="button5"
-        onclick="guess(5), o.start(0)"
-        onmousedown="startTone(5), o.start(0)"
+        onclick="guess(5), context.resume()"
+        onmousedown="startTone(5), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(5)"
       ></button>
       <button
         id="button6"
-        onclick="guess(6), o.start(0)"
-        onmousedown="startTone(6), o.start(0)"
+        onclick="guess(6), context.resume()"
+        onmousedown="startTone(6), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(6)"
       ></button>
       <button
         id="button7"
-        onclick="guess(7), o.start(0)"
-        onmousedown="startTone(7), o.start(0)"
+        onclick="guess(7), context.resume()"
+        onmousedown="startTone(7), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(7)"
       ></button>
       <button
         id="button8"
-        onclick="guess(8), o.start(0)"
-        onmousedown="startTone(8), o.start(0)"
+        onclick="guess(8), context.resume()"
+        onmousedown="startTone(8), context.resume()"
         onmouseup="stopTone()"
         onmouseleave="stopTone(8)"
       ></button>
