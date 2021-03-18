@@ -169,6 +169,14 @@ var g = context.createGain();
 g.connect(context.destination);
 g.gain.setValueAtTime(0, context.currentTime);
 o.connect(g);
+o.start(0);
+
+document.querySelector('button').addEventListener('click', function() {
+  context.resume().then(() => {
+    console.log('Playback resumed successfully');
+  });
+});
+
 function lightButton(btn) {
   document.getElementById("button" + btn).classList.add("lit");
 }

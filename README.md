@@ -4,7 +4,7 @@
 
 Submitted by: Stephen Byrnes
 
-Time spent: **22** hours spent in total
+Time spent: **24** hours spent in total
 
 ## Required Functionality
 
@@ -40,6 +40,7 @@ The following **additional** features are implemented:
 - [x] Tiles change color when user hovers over the tile
 - [x] Tiles change size when clicked
 - [x] Settings buttons play an audio file when clicked
+- [x] Game plays a sound when won or lost
 
 ## Video Walkthrough
 
