@@ -17,14 +17,13 @@ function startGame() {
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("customStartBtn").classList.add("hidden");
-  hideCustom()
+  hideCustom();
   playClueSequence();
 }
 function stopGame() {
   gamePlaying = false;
   document.getElementById("stopBtn").classList.add("hidden");
   document.getElementById("startBtn").classList.add("hidden");
-  document.getElementById("customStartBtn").classList.add("hidden");
   document.getElementById("customStartBtn").classList.add("hidden");
   document.getElementById("inputSequence").classList.add("hidden");
   clueHoldTime = 1000;
@@ -38,7 +37,6 @@ function showCustom() {
   document.getElementById("inputSequence").classList.remove("hidden");
   document.getElementById("customBtnOff").classList.add("hidden");
   document.getElementById("customBtnOn").classList.remove("hidden");
-  document.getElementById("customStartBtn").classList.remove("hidden");
   document.getElementById("customStartBtn").classList.remove("hidden");
   document.getElementById("startBtn").classList.add("hidden");
 }
@@ -54,9 +52,36 @@ function startCustom() {
   document.getElementById("startBtn").classList.add("hidden");
   document.getElementById("stopBtn").classList.remove("hidden");
   document.getElementById("customStartBtn").classList.add("hidden");
-  document.getElementById("customStartBtn").classList.add("hidden");
   document.getElementById("inputSequence").classList.add("hidden");
   playClueSequence();
+}
+function empty() {
+  if (pattern[0] != "") {
+   console.log('Custom sequence successfully loaded'); 
+  } else {
+    stopGame(); 
+    soundLose.play();
+    console.log("user attempted an empty custom sequence");
+    alert('Custom sequence is empty or 0 is the first tile!');
+  }
+}
+function isNumberArray() {
+  for (var i = 0; i < pattern.length; i++) {
+    var numberMaybe = parseInt(pattern[i]);
+    if (isNaN(numberMaybe) == true) {
+      stopGame(); 
+      soundLose.play();
+      console.log("user attempted an invalid character as tile");
+      alert('Values must valid numbers!');
+      break;
+    } else if (numberMaybe < 1 || numberMaybe > 8){
+      stopGame(); 
+      soundLose.play();
+      console.log("user attempted a tile value not between 1 and 8");
+      alert('Values must be between 1 and 8!');
+      break;
+    }
+  }
 }
 
 //Setting Up Difficulty Functions
@@ -71,7 +96,7 @@ function casual() {
   nextClueWaitTime = 1000;
   pattern = [1, 4, 3, 2, 5];
   document.getElementById("startBtn").classList.remove("hidden");
-    hideCustom()
+    hideCustom();
   }
 }
 function intermediate() {
@@ -99,7 +124,7 @@ function expert() {
   nextClueWaitTime = 500;
   pattern = [2, 2, 4, 5, 8, 7, 1, 1, 7, 2, 8, 1, 6, 6, 2, 1];
     document.getElementById("startBtn").classList.remove("hidden");
-    hideCustom()
+    hideCustom();
   }
 }
 function goodMorning() {
@@ -112,7 +137,7 @@ function goodMorning() {
   nextClueWaitTime = 500;
   pattern = [5, 3, 2, 1, 2, 3, 5, 3, 2, 1, 2, 3, 2, 3, 5, 3, 5, 6, 3, 6];
     document.getElementById("startBtn").classList.remove("hidden");
-    hideCustom()
+    hideCustom();
   }
 }
 function custom() {
@@ -126,8 +151,8 @@ function custom() {
   nextClueWaitTime = 500;
   var numbers = document.getElementById("inputSequence").value;
   var numbersArray = Array.from(numbers.split(','),Number);
-  for(var a =0;a<numbersArray.length;a++){
-    pattern[a]=numbersArray[a];
+  for(var a = 0; a < numbersArray.length; a++){
+    pattern[a] = numbersArray[a];
     }
   }
 }
@@ -388,8 +413,7 @@ function keyBFlat() {
 };
 }
 
-//Slider Functions
-
+//Slider Sound Functions
 var clickC = document.getElementById("clickC");
 var clickDb = document.getElementById("clickDb"); 
 var clickD = document.getElementById("clickD"); 
@@ -405,6 +429,7 @@ var clickB = document.getElementById("clickB");
 
 function clickSoundC() {
   if (clickC.paused) {
+    clickC.volume = .6;
         clickC.play();
     } else {
         clickC.currentTime = 0
@@ -412,6 +437,7 @@ function clickSoundC() {
 }
 function clickSoundDb() {
   if (clickDb.paused) {
+    clickDb.volume = .6;
         clickDb.play();
     } else {
         clickDb.currentTime = 0
@@ -419,6 +445,7 @@ function clickSoundDb() {
 }
 function clickSoundD() {
   if (clickD.paused) {
+    clickD.volume = .6;
         clickD.play();
     } else {
         clickD.currentTime = 0
@@ -426,6 +453,7 @@ function clickSoundD() {
 }
 function clickSoundEb() {
   if (clickEb.paused) {
+    clickEb.volume = .6;
         clickEb.play();
     } else {
         clickEb.currentTime = 0
@@ -434,12 +462,14 @@ function clickSoundEb() {
 function clickSoundE() {
   if (clickE.paused) {
         clickE.play();
+    clickE.volume = .6;
     } else {
         clickE.currentTime = 0
   }
 }
 function clickSoundF() {
   if (clickF.paused) {
+    clickF.volume = .6;
         clickF.play();
     } else {
         clickF.currentTime = 0
@@ -447,6 +477,7 @@ function clickSoundF() {
 }
 function clickSoundGb() {
   if (clickGb.paused) {
+    clickGb.volume = .6;
         clickGb.play();
     } else {
         clickGb.currentTime = 0
@@ -454,6 +485,7 @@ function clickSoundGb() {
 }
 function clickSoundG() {
   if (clickG.paused) {
+    clickG.volume = .6;
         clickG.play();
     } else {
         clickG.currentTime = 0
@@ -461,6 +493,7 @@ function clickSoundG() {
 }
 function clickSoundAb() {
   if (clickAb.paused) {
+    clickAb.volume = .6;
         clickAb.play();
     } else {
         clickAb.currentTime = 0
@@ -468,6 +501,7 @@ function clickSoundAb() {
 }
 function clickSoundA() {
   if (clickA.paused) {
+    clickA.volume = .6;
         clickA.play();
     } else {
         clickA.currentTime = 0
@@ -475,6 +509,7 @@ function clickSoundA() {
 }
 function clickSoundBb() {
   if (clickBb.paused) {
+    clickBb.volume = .6;
         clickBb.play();
     } else {
         clickBb.currentTime = 0
@@ -482,12 +517,15 @@ function clickSoundBb() {
 }
 function clickSoundB() {
   if (clickB.paused) {
+    clickB.volume = .6;
         clickB.play();
     } else {
         clickB.currentTime = 0
   }
 }
 
+
+//Key Button Display
 function sliderValue(slideAmount) {
   var sliderValue = document.getElementById("value");
 sliderValue.innerHTML = slideAmount;
