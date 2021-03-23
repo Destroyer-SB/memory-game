@@ -4,7 +4,7 @@
 
 Submitted by: Stephen Byrnes
 
-Time spent: **24** hours spent in total
+Time spent: **30** hours spent in total
 
 ## Required Functionality
 

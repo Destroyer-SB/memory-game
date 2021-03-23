@@ -108,10 +108,10 @@
     </div>
     
  <!-- Start & Stop Button Region-->    
-     <button id="startBtn" class="hidden" onclick="startGame(), playClickStart(), context.resume()">
+     <button id="startBtn" class="hidden" onclick="startGame(), playClickStart(), context.resume(), empty(), isNumberArray()">
       Start
     </button>
-    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), playClickStart(), context.resume()">
+    <button id="customStartBtn" class="hidden" onclick="custom(), startGame(), playClickStart(), context.resume(), empty(), isNumberArray()">
       Start
     </button>
     <button id="stopBtn" class="hidden" onclick="stopGame(), playClickStop(), hideCustom()">
@@ -179,34 +179,34 @@
     </div>
     
     
-<!-- Script for Changing Background Color Region-->  
+<!-- Functions for Changing Background Color Region-->  
     <script>
     function changeColor(color) { 
                 document.body.style.background = color; 
-            } 
-              
-      function backgroundColorCasual() { 
+            }         
+    function backgroundColorCasual() { 
                 changeColor('MediumSeaGreen');
                 document.getElementById("background").style.transition= "all 2s";
             }
-      function backgroundColorIntermediate() { 
+    function backgroundColorIntermediate() { 
                 changeColor('SandyBrown');
                 document.getElementById("background").style.transition= "all 2s";
             }
-      function backgroundColorExpert() { 
+    function backgroundColorExpert() { 
                 changeColor("DarkRed");
                 document.getElementById("background").style.transition= "all 2s";
             }
-      function backgroundColorGoodMorning() { 
+    function backgroundColorGoodMorning() { 
                 changeColor("SteelBlue");
                 document.getElementById("background").style.transition= "all 2s";
             }
-      function backgroundColorCustom() { 
+    function backgroundColorCustom() { 
                 changeColor("HotPink");
                 document.getElementById("background").style.transition= "all 2s";
             }
     </script>
-    
+ 
+<!-- Sounds For Each Difficulty Button--> 
     <audio id="clickSoundCasual" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick.mp3?v=1615565831125" type="audio/mpeg">
 </audio>
     <audio id="clickSoundIntermediate" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%202.mp3?v=1615569833711" type="audio/mpeg">
@@ -218,11 +218,13 @@
     <audio id="clickSoundCustom" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%205.mp3?v=1615569833406" type="audio/mpeg">
 </audio>
     
+<!-- Sounds For Start & Stop Button--> 
     <audio id="startSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FStart.mp3?v=1615570754098" type="audio/mpeg">
 </audio>
     <audio id="stopSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FStop.mp3?v=1615570756113" type="audio/mpeg">
 </audio>
-    
+
+<!-- Sounds For Each Key Slider--> 
     <audio id="clickC" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20C.mp3?v=1615569833822" type="audio/mpeg">
 </audio>
     <audio id="clickDb" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20C%23.mp3?v=1615569834174" type="audio/mpeg">
@@ -248,19 +250,21 @@
     <audio id="clickB" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FClick%20B.mp3?v=1615569833503" type="audio/mpeg">
 </audio>
     
+<!-- Sounds For Game Outcomes--> 
     <audio id="gameWonSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FGameWon.mp3?v=1615590399395" type="audio/mpeg">
 </audio>
     <audio id="gameLoseSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FGameLose.mp3?v=1615590399394" type="audio/mpeg">
 </audio>
     
-    <script>
-      var clickCasual = document.getElementById("clickSoundCasual"); 
-      var clickIntermediate = document.getElementById("clickSoundIntermediate"); 
-      var clickExpert = document.getElementById("clickSoundExpert"); 
-      var clickGM = document.getElementById("clickSoundGM"); 
-      var clickCustom = document.getElementById("clickSoundCustom"); 
-      var clickStart = document.getElementById("startSound"); 
-      var clickStop = document.getElementById("stopSound"); 
+<!-- Functions for playing Difficulty Button Sounds--> 
+  <script>    
+var clickCasual = document.getElementById("clickSoundCasual"); 
+var clickIntermediate = document.getElementById("clickSoundIntermediate"); 
+var clickExpert = document.getElementById("clickSoundExpert"); 
+var clickGM = document.getElementById("clickSoundGM"); 
+var clickCustom = document.getElementById("clickSoundCustom"); 
+var clickStart = document.getElementById("startSound"); 
+var clickStop = document.getElementById("stopSound"); 
       
       
 function playClickCasual() { 
@@ -268,52 +272,51 @@ function playClickCasual() {
         clickCasual.play();
     } else {
         clickCasual.currentTime = 0
-  }
+    }
 }
-      function playClickIntermediate() { 
+function playClickIntermediate() { 
   if (clickIntermediate.paused) {
         clickIntermediate.play();
-    } else {
-        clickIntermediate.currentTime = 0
+  } else {
+      clickIntermediate.currentTime = 0
   }
 }
-      function playClickExpert() { 
+function playClickExpert() { 
   if (clickExpert.paused) {
         clickExpert.play();
-    } else {
-        clickExpert.currentTime = 0
+  } else {
+      clickExpert.currentTime = 0
   }
 }
-      function playClickGM() { 
+function playClickGM() { 
   if (clickGM.paused) {
         clickGM.play();
-    } else {
-        clickGM.currentTime = 0
+  } else {
+      clickGM.currentTime = 0
   }
 }
-      function playClickCustom() { 
+function playClickCustom() { 
   if (clickCustom.paused) {
         clickCustom.play();
-    } else {
-        clickCustom.currentTime = 0
+  } else {
+      clickCustom.currentTime = 0
   }
 }
-           function playClickStart() { 
+function playClickStart() { 
   if (clickStart.paused) {
         clickStart.play();
-    } else {
-        clickStart.currentTime = 0
+  } else {
+      clickStart.currentTime = 0
   }
 }
-           function playClickStop() { 
+function playClickStop() { 
   if (clickStop.paused) {
         clickStop.play();
-    } else {
-        clickStop.currentTime = 0
+  } else {
+      clickStop.currentTime = 0
   }
 }
-    </script>
-    
-    
+  </script>
+       
   </body>
 </html>
