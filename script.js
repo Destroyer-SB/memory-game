@@ -62,23 +62,29 @@ function empty() {
     stopGame(); 
     soundLose.play();
     console.log("user attempted an empty custom sequence");
-    alert('Custom sequence is empty or 0 is the first tile!');
+    alert('Custom sequence is empty or 0 is the first number');
   }
 }
 function isNumberArray() {
   for (var i = 0; i < pattern.length; i++) {
-    var numberMaybe = parseInt(pattern[i]);
+    var numberMaybe = parseFloat(pattern[i]);
     if (isNaN(numberMaybe) == true) {
       stopGame(); 
       soundLose.play();
       console.log("user attempted an invalid character as tile");
-      alert('Values must valid numbers!');
+      alert('Custom sequence should have numbers as inputs');
+      break;
+    } else if (Number.isInteger(numberMaybe) != true){
+      stopGame(); 
+      soundLose.play();
+      console.log("user attempted a non-integer tile value");
+      alert('Custom sequence should have valid numbers');
       break;
     } else if (numberMaybe < 1 || numberMaybe > 8){
       stopGame(); 
       soundLose.play();
       console.log("user attempted a tile value not between 1 and 8");
-      alert('Values must be between 1 and 8!');
+      alert('Custom sequence should have numbers between 1 and 8');
       break;
     }
   }
