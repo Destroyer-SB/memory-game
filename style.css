@@ -32,7 +32,7 @@ h1 {
   border-radius: 5px;
   background: DarkGray;
   outline: none;
-  opacity: 1;
+  opacity: .5;
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
@@ -47,6 +47,7 @@ h1 {
   border-radius: 5px;
   background: white;
   cursor: pointer;
+  transition: background-color 100ms linear;
 }
 .slider::-moz-range-thumb {
   width: 25px;
@@ -54,6 +55,7 @@ h1 {
   border-radius: 50%;
   background: #4CAF50;
   cursor: pointer;
+  transition: background-color 100ms linear;
 }
 
 /* Difficulty Button Styling */
@@ -70,7 +72,6 @@ h1 {
   border: 2px solid lightseagreen;
 } #casualBtn:hover {
   background: springgreen;
-  transition: background-color 1000ms linear;
 }
 #intermediateBtn {
   background: white;
@@ -95,10 +96,26 @@ h1 {
 #customBtnOff {
   background: white;
   border: 2px solid lightseagreen;
+  transition: background-image 1000ms linear;
 } #customBtnOn {
   background: white;
   border: 2px solid lightseagreen;
+  transition: background-image 1000ms linear;
 }
+#customBtnOff:hover {
+  background-image: linear-gradient(90deg, #00C0FF 10%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:rainbow 10s linear infinite;
+}
+#customBtnOn:hover {
+  background-image: linear-gradient(90deg, #00C0FF 10%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+   animation:rainbow 10s linear infinite;
+}
+@keyframes rainbow {
+  to {
+    background-position:10vw;
+  }
+}
+
 #inputSequence {
   background: white;
   border: 2px solid lightseagreen;
