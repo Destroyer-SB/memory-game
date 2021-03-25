@@ -6,6 +6,8 @@ body {
   margin: 3em;
   background-color: lightseagreen;
   color: white;
+  min-width:1400px;
+  min-height:900px;
 }
 h1 {
   font-family: verdana, arial, sans-serif;
@@ -191,16 +193,20 @@ button {
 }
 
 #topRow > button {
-  width: 15%;
+  width: 14.5%;
   height: 29%;
-  margin: .8%;
+  margin: .9%;
   outline: none;
+  min-width: 250px;
+  min-height: 200px;
 }
 #bottomRow > button {
-  width: 15%;
+  width: 14.5%;
   height: 29%;
-  margin: .8%;
+  margin: .9%;
   outline: none;
+  min-width: 250px;
+  min-height: 200px;
 }
 #button1 {
   background: white;
@@ -280,65 +286,81 @@ button {
 #button1.lit {
   background: springgreen;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button2:active,
 #button2.lit {
   background: aqua;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button3:active,
 #button3.lit {
   background: tomato;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button4:active,
 #button4.lit {
   background: yellow;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button5:active,
 #button5.lit {
   background: royalblue;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button6:active,
 #button6.lit {
   background: deeppink;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button7:active,
 #button7.lit {
   background: firebrick;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 #button8:active,
 #button8.lit {
   background: peru;
   border: 10px solid white;
-  width: 12%;
+  width: 11%;
   height: 23%;
   outline: none;
+  min-width: 150px;
+  min-height: 110px;
 }
 
 
