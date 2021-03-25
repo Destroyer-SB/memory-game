@@ -4,7 +4,7 @@
 
 Submitted by: Stephen Byrnes
 
-Time spent: **33** hours spent in total
+Time spent: **30** hours spent in total
 
 ## Required Functionality
 
@@ -41,12 +41,14 @@ The following **additional** features are implemented:
 - [x] Tiles change size when clicked
 - [x] Settings buttons play an audio file when clicked
 - [x] Game plays a sound when won or lost
+- [x] Added switch that spins tiles are neutralizes their colors when toggled
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/fNddAX0.gif' title='Final Game Demo' width='' alt='Final Game Demo' />
+<img src='https://i.imgur.com/cawQzlQ.gif' title='Light And Sound Memory Game Demo
+' width='' alt='Light And Sound Memory Game Demo' />
 
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
 
