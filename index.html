@@ -28,8 +28,9 @@
     </p>
     
     <p>
-      For custom: input the sequence of tiles (ex. 1,2,3,4) and then "start" to begin! (Note: Tiles are labeled from 1 to 8, from left to right)
+      For custom: input the sequence of tiles (ex. 1,2,3,4) and then "start" to begin! (Note: Tiles are labeled from 1 to 8, left to right)
     </p>
+    
     
 <!-- Difficulty Button Region-->
     <div id="difficultyButtonArea">
@@ -49,46 +50,46 @@
  <!-- Key Change Region-->     
       <div id="keySection">
         <div id="keyBtn">
-        <button id="keyC" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyC" class="hidden" style="position: absolute; right: 34%;">
         Key: C
       </button>
-      <button id="keyD" class="hidden" style="position: absolute; right: 250;">
+      <button id="keyD" class="hidden" style="position: absolute; right: 34%;">
         Key: D
       </button>
-        <button id="keyE" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyE" class="hidden" style="position: absolute; right: 34%;">
         Key: E
       </button>
-        <button id="keyF" style="position: absolute; right: 250;">
+        <button id="keyF" style="position: absolute; right: 34%;">
         Key: F
       </button>
-        <button id="keyG" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyG" class="hidden" style="position: absolute; right: 34%;">
         Key: G
       </button>
-        <button id="keyA" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyA" class="hidden" style="position: absolute; right: 34%;">
         Key: A
       </button>
-        <button id="keyB" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyB" class="hidden" style="position: absolute; right: 34%;">
         Key: B
       </button>
-        <button id="keyDFlat" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyDFlat" class="hidden" style="position: absolute; right: 34%;">
         Key: C# / Db
       </button>
-        <button id="keyEFlat" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyEFlat" class="hidden" style="position: absolute; right: 34%;">
         Key: D# / Eb
       </button>
-        <button id="keyGFlat" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyGFlat" class="hidden" style="position: absolute; right: 34%;">
         Key: F# / Gb
       </button>
-        <button id="keyAFlat" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyAFlat" class="hidden" style="position: absolute; right: 34%;">
         Key: G# / Ab
       </button>
-        <button id="keyBFlat" class="hidden" style="position: absolute; right: 250;">
+        <button id="keyBFlat" class="hidden" style="position: absolute; right: 34%;">
         Key: A# / Bb
       </button> 
         </div>
 <!-- Slider Region-->                 
         <div class="slidecontainer">
-          <input class="slider" type="range" min="1" max="12" value="6" style="position: absolute; right: 355;" oninput="sliderValue(this.value)">
+          <input class="slider" type="range" min="1" max="12" value="6" style="position: absolute; right: 41.5%;" oninput="sliderValue(this.value)">
         
         <p id="value" class="hidden"></p>
         <p id="key"></p>
@@ -120,7 +121,8 @@
     
  <!-- Game Tiles Region-->  
     <div id="gameButtonArea">
-      <button
+      <div id="topRow">
+        <button
         id="button1"
         onclick="guess(1), context.resume()"
         onmousedown="startTone(1), context.resume()"
@@ -148,7 +150,10 @@
         onmouseup="stopTone()"
         onmouseleave="stopTone(4)"
         ></button>
-      <button
+      </div>
+      
+      <div id="bottomRow">
+        <button
         id="button5"
         onclick="guess(5), context.resume()"
         onmousedown="startTone(5), context.resume()"
@@ -176,6 +181,8 @@
         onmouseup="stopTone()"
         onmouseleave="stopTone(8)"
         ></button>
+      </div>
+      
     </div>
     
     
@@ -204,6 +211,86 @@
                 changeColor("HotPink");
                 document.getElementById("background").style.transition= "all 2s";
             }
+      
+      function switchToggle() {
+     var switchState = document.getElementById("check");
+      
+      if (switchState.checked) {
+        document.getElementById("button1").style.transform = "rotate(90deg)";
+        document.getElementById("button1").style.background = "white";
+        document.getElementById("button1").style.border = "10px solid white";
+        
+        document.getElementById("button2").style.transform = "rotate(90deg)";
+        document.getElementById("button2").style.background = "white";
+        document.getElementById("button2").style.border = "10px solid white";
+        
+        document.getElementById("button3").style.transform = "rotate(90deg)";
+        document.getElementById("button3").style.background = "white";
+        document.getElementById("button3").style.border = "10px solid white";
+        
+        document.getElementById("button4").style.transform = "rotate(90deg)";
+        document.getElementById("button4").style.background = "white";
+        document.getElementById("button4").style.border = "10px solid white";
+        
+        document.getElementById("button5").style.transform = "rotate(90deg)";
+        document.getElementById("button5").style.background = "white";
+        document.getElementById("button5").style.border = "10px solid white";
+        
+        document.getElementById("button6").style.transform = "rotate(90deg)";
+        document.getElementById("button6").style.background = "white";
+        document.getElementById("button6").style.border = "10px solid white";
+        
+        document.getElementById("button7").style.transform = "rotate(90deg)";
+        document.getElementById("button7").style.background = "white";
+        document.getElementById("button7").style.border = "10px solid white";
+        
+        document.getElementById("button8").style.transform = "rotate(90deg)";
+        document.getElementById("button8").style.background = "white";
+        document.getElementById("button8").style.border = "10px solid white";
+        
+        changeColor('black');
+        document.getElementById("background").style.transition= "all 1.5s";
+        document.getElementById("secretMessage").classList.remove("hidden");
+        
+        
+      } else {
+        document.getElementById("button1").style.transform = "rotate(0deg)";
+        document.getElementById("button1").style.background = "grey";
+        document.getElementById("button1").style.border = "10px solid grey";
+        
+        document.getElementById("button2").style.transform = "rotate(0deg)";
+        document.getElementById("button2").style.background = "grey";
+        document.getElementById("button2").style.border = "10px solid grey";
+        
+        document.getElementById("button3").style.transform = "rotate(0deg)";
+        document.getElementById("button3").style.background = "grey";
+        document.getElementById("button3").style.border = "10px solid grey";
+        
+        document.getElementById("button4").style.transform = "rotate(0deg)";
+        document.getElementById("button4").style.background = "grey";
+        document.getElementById("button4").style.border = "10px solid grey";
+        
+        document.getElementById("button5").style.transform = "rotate(0deg)";
+        document.getElementById("button5").style.background = "grey";
+        document.getElementById("button5").style.border = "10px solid grey";
+        
+        document.getElementById("button6").style.transform = "rotate(0deg)";
+        document.getElementById("button6").style.background = "grey";
+        document.getElementById("button6").style.border = "10px solid grey";
+        
+        document.getElementById("button7").style.transform = "rotate(0deg)";
+        document.getElementById("button7").style.background = "grey";
+        document.getElementById("button7").style.border = "10px solid grey";
+        
+        document.getElementById("button8").style.transform = "rotate(0deg)";
+        document.getElementById("button8").style.background = "grey";
+        document.getElementById("button8").style.border = "10px solid grey";
+        
+        changeColor("LightSlateGrey");
+        document.getElementById("background").style.transition= "all 1.5s";
+      }
+    }
+      
     </script>
  
 <!-- Sounds For Each Difficulty Button--> 
@@ -256,6 +343,9 @@
     <audio id="gameLoseSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FGameLose.mp3?v=1615590399394" type="audio/mpeg">
 </audio>
     
+    <audio id="switchSound" src="https://cdn.glitch.com/06f677a4-888e-4a4f-89ad-190b20548511%2FSwitch.mp3?v=1616632838092" type="audio/mpeg">
+    </audio>
+    
 <!-- Functions for playing Difficulty Button Sounds--> 
   <script>    
 var clickCasual = document.getElementById("clickSoundCasual"); 
@@ -265,6 +355,7 @@ var clickGM = document.getElementById("clickSoundGM");
 var clickCustom = document.getElementById("clickSoundCustom"); 
 var clickStart = document.getElementById("startSound"); 
 var clickStop = document.getElementById("stopSound"); 
+var switchSound = document.getElementById("switchSound"); 
       
       
 function playClickCasual() { 
@@ -316,7 +407,26 @@ function playClickStop() {
       clickStop.currentTime = 0
   }
 }
+    function playSwitchSound() { 
+  if (switchSound.paused) {
+        switchSound.play();
+  } else {
+      switchSound.currentTime = 0
+  }
+}
   </script>
+    
+<!-- Toggle Switch--> 
+    <div>
+      <label class="switch">
+  <input type="checkbox" id="check" onclick="switchToggle(), playSwitchSound(), context.resume()">
+  <span class="toggle"></span>
+</label>
+      
+      <p id="secretMessage" class="hidden">
+      (To revert to colored tiles, refresh page)
+    </p>
+    </div>
        
   </body>
 </html>
