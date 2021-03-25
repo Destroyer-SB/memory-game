@@ -3,7 +3,7 @@
 /* General Styling */
 body {
   font-family: helvetica, arial, sans-serif;
-  margin: 10em;
+  margin: 3em;
   background-color: lightseagreen;
   color: white;
 }
@@ -46,14 +46,6 @@ h1 {
   height: 30px;
   border-radius: 5px;
   background: white;
-  cursor: pointer;
-  transition: background-color 100ms linear;
-}
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
   cursor: pointer;
   transition: background-color 100ms linear;
 }
@@ -105,10 +97,14 @@ h1 {
 #customBtnOff:hover {
   background-image: linear-gradient(90deg, #00C0FF 10%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
    animation:rainbow 10s linear infinite;
+  opacity: 1;
+  transition: opacity .2s;
 }
 #customBtnOn:hover {
   background-image: linear-gradient(90deg, #00C0FF 10%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
    animation:rainbow 10s linear infinite;
+  opacity: 1;
+  transition: opacity .2s;
 }
 @keyframes rainbow {
   to {
@@ -194,10 +190,16 @@ button {
   outline: none;
 }
 
-#gameButtonArea > button {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+#topRow > button {
+  width: 15%;
+  height: 29%;
+  margin: .8%;
+  outline: none;
+}
+#bottomRow > button {
+  width: 15%;
+  height: 29%;
+  margin: .8%;
   outline: none;
 }
 #button1 {
@@ -278,63 +280,110 @@ button {
 #button1.lit {
   background: springgreen;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button2:active,
 #button2.lit {
   background: aqua;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button3:active,
 #button3.lit {
   background: tomato;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button4:active,
 #button4.lit {
   background: yellow;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button5:active,
 #button5.lit {
   background: royalblue;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button6:active,
 #button6.lit {
   background: deeppink;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button7:active,
 #button7.lit {
   background: firebrick;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
 }
 #button8:active,
 #button8.lit {
   background: peru;
   border: 10px solid white;
-  width: 130px;
-  height: 130px;
+  width: 12%;
+  height: 23%;
   outline: none;
+}
+
+
+/* Toggle Switch Styling */
+.switch {
+  position: absolute; right: 2%;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.toggle {
+  position: absolute; right: 10%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.toggle:before {
+  position: absolute; right: 10%;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .toggle {
+  background-color: #2196F3;
+}
+input:focus + .toggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
